@@ -1,29 +1,27 @@
 # 🌐 S3 Public Access Troubleshooting – Orbit3 Coverage Maps
 
 Welcome to another AWS troubleshooting scenario!  
-This time, our fictional satellite startup, Orbit3 is trying to share coverage maps and beam footprints for their **Ku- and Ka-band satellites** using **Amazon S3**.
+This time, our fictional satellite startup, Orbit3 is trying to share coverage maps and beam footprints for their Ku- and Ka-band satellites** using Amazon S3.
 
 ---------------
 
 ## 📖 Scenario
 
 The Orbit3 cloud engineering team have so far: 
-- Uploaded the beam coverage map to a general-purpose **S3 bucket**, 
-- **Disabled Block Public Access (BPA)** on the bucket
-- Attached a **bucket policy** to allow public access
+- Uploaded the beam coverage map to a general-purpose S3 bucket, 
+- Disabled Block Public Access (BPA) on the bucket
+- Attached a bucket policy to allow public access
 
-They expected users outside AWS to be able to view the file through a public URL, but that’s not happening.
+They expected users outside AWS to be able to view the file through a public URL, but that’s not happening. Can you spot what they missed?
 
-You can find the actual bucket policy they used in this folder.  
-Can you spot what they missed?
+You can find the actual bucket policy they used in the "Troubleshooting/BeamFootprintAccess" folder.  
 
 ---------------
-
 
 ## 🚀 Why This Matters
 
 This is a common real-world pitfall in cloud environments:  
-**Assuming one layer of access control is enough**, when multiple layers must be aligned.
+Assuming one layer of access control is enough, when multiple layers must be aligned.
 
 
 Happy debugging! 🧠⚡  
