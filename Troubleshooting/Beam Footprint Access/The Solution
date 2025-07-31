@@ -12,7 +12,7 @@ So even if the bucket policy allows public access, if it doesn't include the spe
 Update the bucket policy to explicitly reference the object(s) you want to make public.
 
 
-OUR UPDATED BUCKET POLICY:
+THE UPDATED BUCKET POLICY:
 
 {
     "Version": "2012-10-17",
