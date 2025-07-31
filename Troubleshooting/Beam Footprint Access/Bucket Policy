@@ -1,0 +1,12 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AccessToTheBeamCoverageMap",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "S3:*",
+            "Resource": "arn:aws:s3:::orbit3-asset-management"
+        }
+    ]
+}
