@@ -1,0 +1,15 @@
+## ✅ Solution
+
+[Click here to see the solution and explanation.](./solution.md)
+
+---
+
+## 🛠️ Tools & Concepts Involved
+
+- Amazon S3
+- Bucket Policies
+- Public Access Settings
+- IAM Identity vs Anonymous Access
+- `aws s3api` vs `aws s3` commands
+
+---
