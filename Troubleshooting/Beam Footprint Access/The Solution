@@ -1,15 +1,16 @@
 ## ✅ Solution
 
-[Click here to see the solution and explanation.](./solution.md)
+The Orbit3 Clou engineers were on the right path. They made the bucket public and created a public policy allowing all public identities to access the bucket. The one thing they missed though is a common oversight with S3 buckets: Making a bucket public doesnt necessarily make its objects public as well. You have to specifically add the object name in the permission policy. Therefore, the permission policy should include the object being shared:
 
----
-
-## 🛠️ Tools & Concepts Involved
-
-- Amazon S3
-- Bucket Policies
-- Public Access Settings
-- IAM Identity vs Anonymous Access
-- `aws s3api` vs `aws s3` commands
-
----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AccessToTheBeamCoverageMap",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "S3:*",
+            "Resource": "arn:aws:s3:::orbit3-asset-management/coverage_map.png"
+        }
+    ]
+}
