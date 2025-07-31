@@ -1,6 +1,18 @@
 ## ✅ Solution
 
-The Orbit3 Clou engineers were on the right path. They made the bucket public and created a public policy allowing all public identities to access the bucket. The one thing they missed though is a common oversight with S3 buckets: Making a bucket public doesnt necessarily make its objects public as well. You have to specifically add the object name in the permission policy. Therefore, the permission policy should include the object being shared:
+The Orbit3 cloud engineers were nearly there.
+They correctly disabled Block Public Access on the bucket and attached a bucket policy allowing public access to its contents.
+
+However, they overlooked a common S3 : Making a bucket public doesn't automatically make the objects inside it public.
+
+In S3, permissions must explicitly reference the object key being accessed.
+So even if the bucket policy allows public access, if it doesn't include the specific object (like coverage_map.png), anonymous users won’t be able to retrieve it.
+
+✅ The Fix:
+Update the bucket policy to explicitly reference the object(s) you want to make public.
+
+
+OUR UPDATED BUCKET POLICY:
 
 {
     "Version": "2012-10-17",
